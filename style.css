@@ -52,7 +52,8 @@ body, html {
   max-width: 540px;
   width: auto;
   float:left;
-  margin-left: 10%;;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .bg {
