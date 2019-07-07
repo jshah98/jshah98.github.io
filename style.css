@@ -6,7 +6,7 @@
 }
 
 p{
-  font-size: 24px;
+  font-size: 20px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     color: white;
 }
@@ -18,7 +18,7 @@ p{
 }
 
 h1{
-  font-size: 60px;
+  font-size: 54px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   color: white;
   font-weight: 100;
@@ -30,10 +30,10 @@ button{
   text-align: center;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   border-radius: 8px;
+  border: 1px solid black;
   text-decoration: none;
-  display: inline-block;
   font-size: 20px;
-  padding: 1.5%;
+  padding: 4%;
   width: 200px;
   cursor: pointer;
 }
@@ -49,8 +49,7 @@ body, html {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  max-width: 540px;
-  width: auto;
+  width: 50vw;
   float:left;
   margin-left: 10%;
   margin-right: 10%;
@@ -58,7 +57,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("images/can.JPG");
+  background-image: url("images/half.JPG");
   /* Full height */
   height: 100%;
 
@@ -67,4 +66,48 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media @mq-small-only {
+    flex-direction: column;
+  }
+
+}
+.leftDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 100vh;
+  width: 46%;
+  float: left;
+
+  @media @mq-small-only {
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+}
+.rightDiv{
+  width: 50%;
+  height: 100vh;
+  /* The image used */
+  background-image: url("images/half.JPG");
+  /* Full height */
+  height: 100%;
+  float: right;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media @mq-small-only {
+    max-width: 0%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
 }
