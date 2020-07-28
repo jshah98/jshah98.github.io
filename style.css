@@ -33,12 +33,9 @@ button{
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding: 2.5%;
+  padding: 1.5%;
   width: 200px;
   cursor: pointer;
-}
-a{
-      width: 200px;
 }
 
 body, html {
@@ -61,7 +58,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("images/half.JPG");
+  background-image: url("images/can.JPG");
   /* Full height */
   height: 100%;
 
