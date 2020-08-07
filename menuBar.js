@@ -96,7 +96,7 @@ class MenuBar extends HTMLElement{
         <div class="dropdown">
           <img onclick="myFunction()" class="dropbtn" src="images/menu.png"></img>
           <div id="myDropdown" class="dropdown-content">
-          <a class="menuButton" href="index.html">About me</a>
+          <a class="menuButton" href="/">About me</a>
           <a class="menuButton" href="experience.html">Experience</a>
           <!-- <a class="menuButton" href="portfolio.html">Portfolio</a>
           <a class="menuButton" href="blog.html">Blog</a> -->
@@ -104,7 +104,7 @@ class MenuBar extends HTMLElement{
         </div>
       </div>
       <div class="menuItems">
-        <a class="menuButton" href="index.html">About me</a>
+        <a class="menuButton" href="/">About me</a>
         <a class="menuButton" href="experience.html">Experience</a>
         <!-- <a class="menuButton" href="portfolio.html">Portfolio</a>
         <a class="menuButton" href="blog.html">Blog</a> -->
