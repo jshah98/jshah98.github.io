@@ -98,16 +98,16 @@ class MenuBar extends HTMLElement{
           <div id="myDropdown" class="dropdown-content">
           <a class="menuButton" href="/">About me</a>
           <a class="menuButton" href="experience.html">Experience</a>
-          <!-- <a class="menuButton" href="portfolio.html">Portfolio</a>
-          <a class="menuButton" href="blog.html">Blog</a> -->
+          <a class="menuButton" href="portfolio.html">Portfolio</a>
+          <!-- <a class="menuButton" href="blog.html">Blog</a> -->
           </div>
         </div>
       </div>
       <div class="menuItems">
         <a class="menuButton" href="/">About me</a>
         <a class="menuButton" href="experience.html">Experience</a>
-        <!-- <a class="menuButton" href="portfolio.html">Portfolio</a>
-        <a class="menuButton" href="blog.html">Blog</a> -->
+        <a class="menuButton" href="portfolio.html">Portfolio</a>
+        <!-- <a class="menuButton" href="blog.html">Blog</a> -->
       </div>
     </div>
     `;
