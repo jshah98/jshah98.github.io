@@ -3,6 +3,13 @@ class ProfileCard extends HTMLElement{
     super();
     var s = `
     <style>
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      max-width: 400px;
+    }
     .card-item{
       margin: 12px;
 
