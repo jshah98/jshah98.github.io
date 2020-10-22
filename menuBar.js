@@ -99,7 +99,7 @@ class MenuBar extends HTMLElement{
           <a class="menuButton" href="/">About me</a>
           <a class="menuButton" href="experience.html">Experience</a>
           <a class="menuButton" href="portfolio.html">Portfolio</a>
-          <!-- <a class="menuButton" href="blog.html">Blog</a> -->
+          <a class="menuButton" href="blog.html">Blog</a>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ class MenuBar extends HTMLElement{
         <a class="menuButton" href="/">About me</a>
         <a class="menuButton" href="experience.html">Experience</a>
         <a class="menuButton" href="portfolio.html">Portfolio</a>
-        <!-- <a class="menuButton" href="blog.html">Blog</a> -->
+        <a class="menuButton" href="blog.html">Blog</a>
       </div>
     </div>
     `;
