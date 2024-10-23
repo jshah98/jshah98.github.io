@@ -1,138 +1,101 @@
-/* html{
-  display: flex;
-  justify-content: center;
-} */
-
-summary{
-  display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-figcaption{
-  text-align: center;
-  padding: 8px;
-}
-body{
-  margin: auto;
-  max-width: 1200px;
-}
-.card{
-  box-shadow: 0.5px 1px 2px #888888;
-  border-radius: 12px;
-  padding: 24px;
-  padding-top: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
-}
-.avatar{
-  width:300px;
-  height:300px;
-  object-fit:cover;
-  border-radius:50%;
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.container{
-  display:grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  padding: 5%;
-
-  max-width: 1000px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  /* overflow: visible; */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.center{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5%;
-  padding-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1000px;
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%; /* Keeps the dot circular */
+    border: 2px solid #fff;
+    z-index: 1;
+    margin-right: 15px;
+    position: relative;
+    left: -10px; /* Ensures dot is centered on the line */
 }
 
-.subsection{
-  padding-bottom: 0;
-  padding-top: 0;
+.timeline-content {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    max-width: 1000px;
 }
 
-.top{
-  padding-top: 10%;
+/* Position the dates to the left of the line */
+.timeline-date {
+    font-size: 14px;
+    color: #6c757d;
+    width: 100px;
+    text-align: right;
+    margin-right: 20px;
+    position: relative;
 }
 
-.left{
-  display: flex;
-  justify-content: center;
+/* Line connecting dots */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 118px; /* Position of the line in relation to the dot */
+    top: 25px;
+    bottom: -64px;
+    width: 2px;
+    background-color: #007bff;
 }
 
-.left-text{
-  display:flex;
-  flex-direction: column;
-  /* justify-content: center; */
-
-  margin-top: 0;
+.timeline-item:last-child::before {
+    bottom: 0;
 }
 
-.right{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
 
-  margin-top: 0;
-  width: 100%;
+footer a{
+    margin: 0px 8px; /* Adds space between the icon and text */
+    font-size: 18px; /* Adjusts the icon size */
 }
 
-.right-text{
-  display:flex;
-  flex-direction: column;
-
-  margin-top: 0;
+img.rounded-circle {
+    object-fit: cover; /* Ensures the image content fits nicely within the circle */
+    width: 200px;      /* Set a fixed width */
+    height: 200px;     /* Set a fixed height to maintain a perfect circle */
+    margin-bottom: 5%;
 }
 
-@media screen and (max-width: 800px) {
-  .container{
-    display:flex;
-    flex-direction: column;
-    padding: 5%;
-  }
-  .left-text{
-    margin-top: 0;
-  }
-  .right{
-    margin-top: 48px;
-  }
-  .right-text{
-    margin-top: 24px;
-  }
-  .center{
-    margin-top: 0px;
-  }
+
+/* Media query to hide the timeline below 1400px */
+@media (max-width: 1400px) {
+    .timeline-date, /* Hide dates */
+    .timeline-dot,  /* Hide dots */
+    .timeline-item::before, /* Hide lines */
+    #today-date, /* Hide the "Today's Date" timeline item */
+    #today-label { /* Hide only the "Today" label */
+        display: none;
+    }
+
+    /* Make sure the content takes the full width without the dot */
+    .timeline-item {
+        display: block; /* Ensure that the cards behave as full-width blocks */
+        margin-bottom: 20px; /* Adjust margin for cleaner spacing */
+    }
 }
 
-@media screen and (max-width: 400px) {
-  .avatar{
-    width:200px;
-    height:200px;
-    object-fit:cover;
-    border-radius:50%;
-  }
-  .right{
-    margin-top: 12px;
-  }
-  .container{
-    display:flex;
-    flex-direction: column;
-    padding-bottom: 24px ;
-  }
-  .bottom{
-    padding-bottom: 48px ;
-  }
+/* Hide dates on smaller screens */
+@media (max-width: 768px) {
+    .timeline-date {
+        display: none;
+    }
+
+    .timeline-dot {
+        left: 0; /* Adjust the dot position for smaller screens */
+    }
 }

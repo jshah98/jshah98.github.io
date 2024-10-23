@@ -1,63 +1,410 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script src="index.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jinansh Shah | Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jinansh Shah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#extracurricular">Volunteering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#connect">Contact</a> <!-- Added "Connect" link -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="my-0">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130557482-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-130557482-1');
-    </script>
-
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jinansh Shah</title>
-  </head>
-  <body>
-
-    <menu-bar></menu-bar>
-    <script src="menuBar.js"></script>
-    <div class= "container">
-      <div class="left">
-        <img class="avatar" src="images/head.JPG" alt="Avatar">
-      </div>
-      <div class="right" style="border-bottom: 1px solid #bbb">
-        <h1>Hi, I'm Jinansh</h1>
-        <p>I'm an Engineering Science alum from the University of Toronto with a major in Engineering Mathematics, Statistics, and Finance and a minor in Aritificial Intelligence. I like to create and I care about the environment.</p>
-        <!-- <p> On this site you can find out more about the projects I've worked on, read my blogs, and get in touch with me.</p> -->
-      </div>
+    <!-- Headshot and Welcome Message with Added Padding -->
+    <div class="container mt-5 py-5"> <!-- Added padding on top and bottom -->
+        <div class="row align-items-center">
+            <!-- Headshot -->
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-4 mb-lg-0">
+                <img src="head.JPG" alt="Your Headshot" class="img-fluid rounded-circle" style="max-width: 200px;">
+            </div>
+            <!-- Welcome Message -->
+            <div class="col-lg-8 col-md-6 col-sm-12 text-center text-lg-start">
+                <h1>Hi, I'm Jinansh</h1>
+                <p>I'm a data scientist with a strong background in finance and a passion for helping the environment. I enjoy building tools using new technologies and love to tell stories through data.</p>
+                <p></p>
+                <span class="badge text-bg-secondary">University of Toronto</span>
+                <span class="badge text-bg-success">Engineering Science</span>
+            </div>
+        </div>
     </div>
-    <!-- <profile-card class="center" title="BASc, University Of Toronto" company="Engineering Science - Engineering Mathematics, Statistics, Finance with Artificial Intelligence Minor" date="April 2021"></profile-card>
-    <script src="profileCard.js"></script> -->
-    <!-- <div class="center subsection">
-      <div class="card">
-        <h2> Education </h2>
-      </div>
-      <div class="card" style="margin-top:5%">
-        <h2> Skills <h2>
-      </div>
-    </div>
-    <div class= "container">
-      <div class="left-text card">
-        <h2> Design Strengths </h2>
-      </div>
-      <div class="right-text card">
-        <h2> Areas of Growth </h2>
-      </div>
-    </div>
-    <div class="center bottom">
-      <h2> Personal Engineering Design Process </h2>
-    </div> -->
+    <!-- <hr class="my-0"> -->
 
 
 
 
+    <!-- Experience Section with Dates on the Left -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-2 ">Professional Experience</h2>
+            <p class="mb-4">Click on each item for more information, or <a class="link-underline-opacity-4" data-bs-toggle="collapse" data-bs-target=".multi-collapse" style="margin-top: -4px;">expand all</a></p>
+            <div class="timeline">
+                <!-- Today's Date -->
+                <div class="timeline-item">
+                    <div class="timeline-date" id="today-date"></div>
+                    <div class="timeline-dot"></div>
+                    <h5 id="today-label">Today</h5> <!-- Added id to "Today" h5 -->
+                </div>
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2022</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
 
-    <footer-bar></footer-bar>
-    <script src="footerBar.js"></script>
-  </body>
+                        <div data-bs-toggle="collapse" href="#job1" role="button" aria-expanded="false" aria-controls="job1">
+                            <h5>
+                                Senior Manager, Analytics & Decision Science
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://cibc.com/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>Canadian Imperial Bank of Commerce</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>Aug 2022 - Present</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job1">
+                            
+                            <ul>
+                                <li>
+                                    Generated $10MM by deploying machine learning models and executing strategy to optimize mortgage renewals
+                                </li>
+                                <li>
+                                    Reduced hedging costs by $12MM by developing classification models using scikit-learn, XGBoost and Tableau
+                                </li>
+                                <li>
+                                    Developed and maintained a Client Behaviour Dataset using SAS reducing model development time by 20%
+                                </li>
+                                <li>
+                                    Designed a Model Monitoring framework using SAS, Python, and Tableau enabling error resolution in real-time
+                                </li>
+                                <li>
+                                    Co-founded the Innovation Committee on-boarding 90% of colleagues from cross-functional teams to new tools and technologies through monthly workshops and newsletters
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2022</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <div data-bs-toggle="collapse" href="#job2" role="button" aria-expanded="false" aria-controls="job2">
+                            <h5>
+                                Data Scientist
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://www.fisglobal.com/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>FIS Global</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>Aug 2022 - Present</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job2">
+                            <ul>
+                                <li>
+                                    Developed data-driven KPI dashboards using Power BI and SQL, providing the Board of Directors of a publicly traded $46B company with historical and future risks, priorities, and budgets
+                                </li>
+                                <li>
+                                    Reduced manual risk assessment of technology infrastructure used to transfer US$50T worldwide by 99% and automated remediation processes, leveraging data analysis to support technology teams globally
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2021</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <div data-bs-toggle="collapse" href="#job3" role="button" aria-expanded="false" aria-controls="job3">
+                            <h5>
+                                Data Scientist
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://sibli.ai/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>Sibli</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>Oct 2021 - Jun 2022</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job3">
+                            <ul>
+                                <li>
+                                    Delivered an LLM model that classified ESG news for a large hedge fund using PyTorch and Scikit Learn
+                                </li>
+                                <li>
+                                    Improved data quality by 95% by evaluating 10,000 news sources and integrating 435 sources to the data pipeline
+                                </li>
+                                <li>
+                                    Trained transformers, summarizers, classifiers and entity recognition models to classify ESG news articles using multiple Azure VMs and GCP BigQuery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2020</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <div data-bs-toggle="collapse" href="#job4" role="button" aria-expanded="false" aria-controls="job4">
+                            <h5>
+                                Data Scientist
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://www.fidelity.ca/en/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>Fidelity Investments</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>Sep 2020 - Apr 2021</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job4">
+                            <ul>
+                                <li>
+                                    Optimized marketing spend by analyzing customer journeys across 10 digital marketing channels and developing a marketing attribution framework using Python and R
+                                </li>
+                                <li>
+                                    Delivered a 25 page thesis comparing Shapley Value Models with other heuristic martketing attribution models
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2019</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <div data-bs-toggle="collapse" href="#job5" role="button" aria-expanded="false" aria-controls="job5">
+                            <h5>
+                                Data Analyst
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://www.rbcroyalbank.com/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>Royal Bank of Caanda</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>May 2019 - Aug 2020</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job5">
+                            <ul>
+                                <li>
+                                    Improved resource allocation of a $300B portfolio by developing a highly accurate time-series forecast of mortgage acquisition and funding - monthly MAPE 4%
+                                </li>
+                                <li>
+                                    Reduced yearly acquisition costs by $5-7MM by developing a Profit and Loss model using SAS and VBA
+                                </li>
+                                <li>
+                                    Won the Personal & Commercial Banking award for significantly improving team performance - nominated by over 30 team members
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 2018</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <div data-bs-toggle="collapse" href="#job6" role="button" aria-expanded="false" aria-controls="job6">
+                            <h5>
+                                Software Developer
+                            </h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Link to Company -->
+                                <a href="https://clear.co/" class="link-primary link-underline-opacity-0 me-1" target="_blank">
+                                    <p>Clearco</p>
+                                </a>
+                                <!-- Duration -->
+                                <p><strong>Apr 2018 - Aug 2018</strong> </p>
+                            </div>
+                            
+                        </div>
+                        <div class="collapse multi-collapse" id="job6">
+                            <ul>
+                                <li>
+                                    Enabled the investment team to generate custom investment offers for e-commerce businesses by projecting cash flows, maintaining IRR, extrapolating the offer space and creating a user interface using Vue.js, node.js, and SQL
+                                </li>
+                                <li>
+                                    Accelerated the offer approval process by 5-7 days by automating background checks and payment plan creation using various external APIs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Robo-Advisor</h5>
+                            <p class="card-text"><strong>Tools Used:</strong> Python</p>
+                            <p class="card-text">
+                                Developed a Python and Firebase-based investment advisor, recommending portfolios that back-tested over 12 five-year periods with 13%+ annual returns from 2005-2020. Optimized portfolios based on user preferences, risk tolerance, and macroeconomic forecasts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Equity Portfolios – Model Comparisons II</h5>
+                            <p class="card-text"><strong>Tools Used:</strong> MATLAB</p>
+                            <p class="card-text">Created CVaR-optimized portfolios using Monte-Carlo simulations. Applied Fama-French models and non-normal simulations, achieving 11.6% annual returns with improved Sharpe ratios.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Equity Portfolios – Model Comparisons I</h5>
+                            <p class="card-text"><strong>Tools Used:</strong> Python, NLP, Machine Learning</p>
+                            <p class="card-text">Compared portfolios using CAPM, Fama-French, PCA factor models, and MVO strategies. PCA models yielded 12.7% annual returns. Implemented cardinality-constrained MVO to improve portfolio performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Extracurricular Involvement Section -->
+    <section id="extracurricular" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Community Involvement</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Founder</h5>
+                            <p class="card-text"><strong>Mission Mom N' Pop</strong></p>
+                            <p class="card-text">Helped small businesses across the GTA build an online presence during the COVID pandemic. Recruited and trained over 20 volunteers and peresonally led engagements with 3 companies.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Involvement 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Director, Startup Consulting Group</h5>
+                            <p class="card-text"><strong>U of T Consulting Association</strong></p>
+                            <p class="card-text">Accelerated the sustainable growth of five startups in the GTA by recruiting, training and facilitating engagements between student consultants, industry advisors and the startups.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Involvement 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultant, Volunteer Consulting Group</h5>
+                            <p class="card-text"><strong>U of T Consulting Association</strong></p>
+                            <p class="card-text">Created a long term financial strategy for Shakespeare in Action by analyzing historical cash flows and conducting team interviews to enable them to steadily grow and transition the organization to a new management team. </p>
+                            <p class="card-text">Determined a target demographic for eMERGE Guelph to increase clientele by gathering customer feedback.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Director, Business Development</h5>
+                            <p class="card-text"><strong>U of T Aerospace Team</strong></p>
+                            <p class="card-text">Managed relationships with sponsors and partners to enable UTAT to launch CubeSat (U-class satellite), attempt to break the Canadian amateur rocketry altitude record, and further enhance R&D in drone technology by leading a team of 6 to acquire and renew sponsorships totaling $16MM.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lead, Business Development</h5>
+                            <p class="card-text"><strong>You’re Next Career Network</strong></p>
+                            <p class="card-text">Hosted 3 career fairs and multiple company spotlight events which enabled 200+ companies to reach 4000+ students. </p>
+                            <p class="card-text">Used CRM tools to personally form and manage relationships with campus recruiters from 75+ companies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="connect" class="text-center text-lg-start">
+        <div class="container p-4">
+            <h2 class="py-4">Let's connect! </h2>
+            <p class="mb-4">Want to get in touch or learn more about me? Feel free to reach out on any platform.</p>
+            <a href="https://linkedin.com/in/jinanshshah" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a> 
+            <a href="https://github.com/jshah98" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a> 
+            <a href="https://instagram.com/jshah98" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>
